@@ -4,8 +4,8 @@
 
 Summary:	Reliable Event Logging Protocol (RELP) library
 Name:		librelp
-Version:	0.1.1
-Release:	%mkrel 3
+Version:	0.1.3
+Release:	%mkrel 1
 License:	GPLv3+
 Group:		System/Libraries
 URL:		http://www.librelp.com/
@@ -70,7 +70,7 @@ rm -rf %{buildroot}
 
 %files -n %{libname}
 %defattr(-,root,root)
-%{_libdir}/lib*.so.*
+%{_libdir}/lib*.so.%{major}*
 
 %files -n %{develname}
 %defattr(-,root,root)
