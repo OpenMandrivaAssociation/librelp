@@ -5,7 +5,7 @@
 Summary:	Reliable Event Logging Protocol (RELP) library
 Name:		librelp
 Version:	0.1.3
-Release:	%mkrel 4
+Release:	%mkrel 6
 License:	GPLv3+
 Group:		System/Libraries
 URL:		http://www.librelp.com/
@@ -80,3 +80,41 @@ rm -rf %{buildroot}
 %{_libdir}/*.*a
 %{_libdir}/pkgconfig/*.pc
 
+
+
+%changelog
+* Mon May 02 2011 Oden Eriksson <oeriksson@mandriva.com> 0.1.3-4mdv2011.0
++ Revision: 661522
+- mass rebuild
+
+* Sun Nov 28 2010 Oden Eriksson <oeriksson@mandriva.com> 0.1.3-3mdv2011.0
++ Revision: 602602
+- rebuild
+
+* Tue Mar 16 2010 Oden Eriksson <oeriksson@mandriva.com> 0.1.3-2mdv2010.1
++ Revision: 520900
+- rebuilt for 2010.1
+
+* Wed Sep 23 2009 Emmanuel Andry <eandry@mandriva.org> 0.1.3-1mdv2010.0
++ Revision: 447886
+- New version 0.1.3
+- check major
+
+* Fri Sep 04 2009 Thierry Vignaud <tv@mandriva.org> 0.1.1-3mdv2010.0
++ Revision: 429829
+- rebuild
+
+* Fri Aug 08 2008 Thierry Vignaud <tv@mandriva.org> 0.1.1-2mdv2009.0
++ Revision: 267990
+- rebuild early 2009.0 package (before pixel changes)
+
+  + Pixel <pixel@mandriva.com>
+    - do not call ldconfig in %%post/%%postun, it is now handled by filetriggers
+
+* Sat May 03 2008 Oden Eriksson <oeriksson@mandriva.com> 0.1.1-1mdv2009.0
++ Revision: 200681
+- import librelp
+
+
+* Sat May 03 2008 Oden Eriksson <oeriksson@mandriva.com> 0.1.1-1mdv2009.0
+- initial Mandriva package
