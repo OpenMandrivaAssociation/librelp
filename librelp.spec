@@ -4,8 +4,8 @@
 
 Summary:	Reliable Event Logging Protocol (RELP) library
 Name:		librelp
-Version:	1.2.0
-Release:	7
+Version:	1.2.7
+Release:	1
 License:	GPLv3+
 Group:		System/Libraries
 Url:		http://www.librelp.com/
@@ -62,4 +62,3 @@ make check
 %{_includedir}/*.h
 %{_libdir}/*.so
 %{_libdir}/pkgconfig/*.pc
-
