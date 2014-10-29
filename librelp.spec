@@ -10,6 +10,7 @@ License:	GPLv3+
 Group:		System/Libraries
 Url:		http://www.librelp.com/
 Source0:	http://download.rsyslog.com/librelp/%{name}-%{version}.tar.gz
+BuildRequires: pkgconfig(gnutls)
 
 %description
 librelp is an easy to use library for the RELP protocol. RELP in turn provides
