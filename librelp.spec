@@ -4,12 +4,13 @@
 
 Summary:	Reliable Event Logging Protocol (RELP) library
 Name:		librelp
-Version:	1.2.0
-Release:	7
+Version:	1.2.7
+Release:	1
 License:	GPLv3+
 Group:		System/Libraries
 Url:		http://www.librelp.com/
 Source0:	http://download.rsyslog.com/librelp/%{name}-%{version}.tar.gz
+BuildRequires: pkgconfig(gnutls)
 
 %description
 librelp is an easy to use library for the RELP protocol. RELP in turn provides
@@ -62,4 +63,3 @@ make check
 %{_includedir}/*.h
 %{_libdir}/*.so
 %{_libdir}/pkgconfig/*.pc
-
