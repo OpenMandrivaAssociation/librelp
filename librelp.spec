@@ -5,7 +5,7 @@
 Summary:	Reliable Event Logging Protocol (RELP) library
 Name:		librelp
 Version:	1.2.7
-Release:	2
+Release:	3
 License:	GPLv3+
 Group:		System/Libraries
 Url:		http://www.librelp.com/
@@ -44,7 +44,7 @@ Development files for the %{libname} library.
 %setup -q
 
 %build
-%configure2_5x \
+%configure \
 	--disable-static
 
 %make
