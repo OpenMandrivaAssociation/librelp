@@ -5,7 +5,7 @@
 Summary:	Reliable Event Logging Protocol (RELP) library
 Name:		librelp
 Version:	1.2.7
-Release:	3
+Release:	4
 License:	GPLv3+
 Group:		System/Libraries
 Url:		http://www.librelp.com/
