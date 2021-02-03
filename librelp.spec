@@ -1,6 +1,6 @@
-%define	major	0
-%define libname	%mklibname relp %{major}
-%define devname	%mklibname relp -d
+%define major 0
+%define libname %mklibname relp %{major}
+%define devname %mklibname relp -d
 
 Summary:	Reliable Event Logging Protocol (RELP) library
 Name:		librelp
@@ -10,8 +10,8 @@ License:	GPLv3+
 Group:		System/Libraries
 Url:		http://www.librelp.com/
 Source0:	http://download.rsyslog.com/librelp/%{name}-%{version}.tar.gz
-BuildRequires: pkgconfig(gnutls)
-BuildRequires: pkgconfig(openssl)
+BuildRequires:	pkgconfig(gnutls)
+BuildRequires:	pkgconfig(openssl)
 
 %description
 librelp is an easy to use library for the RELP protocol. RELP in turn provides
@@ -20,41 +20,38 @@ Reliable Event Logging Protocol). RELP was initiated by Rainer Gerhards after
 he was finally upset by the lossy nature of plain tcp syslog and wanted a cure
 for all these dangling issues.
 
-%package -n	%{libname}
+%package -n %{libname}
 Summary:	Reliable Event Logging Protocol (RELP) library
 Group:		System/Libraries
 
-%description -n	%{libname}
+%description -n %{libname}
 librelp is an easy to use library for the RELP protocol. RELP in turn provides
 reliable event logging over the network (and consequently RELP stands for
 Reliable Event Logging Protocol). RELP was initiated by Rainer Gerhards after
 he was finally upset by the lossy nature of plain tcp syslog and wanted a cure
 for all these dangling issues.
 
-%package -n	%{devname}
+%package -n %{devname}
 Summary:	Development files for the %{libname} library
 Group:		Development/C
 Requires:	%{libname} >= %{version}
 Provides:	%{name}-devel = %{version}-%{release}
 Provides:	relp-devel = %{version}-%{release}
 
-%description -n	%{devname}
+%description -n %{devname}
 Development files for the %{libname} library.
 
 %prep
-%setup -q
+%autosetup -p1
 
 %build
 %configure \
 	--disable-static
 
-%make
-
-%check
-make check
+%make_build
 
 %install
-%makeinstall_std
+%make_install
 
 %files -n %{libname}
 %{_libdir}/librelp.so.%{major}*
