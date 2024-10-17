@@ -8,7 +8,7 @@ Version:	1.11.0
 Release:	2
 License:	GPLv3+
 Group:		System/Libraries
-Url:		http://www.librelp.com/
+Url:		https://www.librelp.com/
 Source0:	http://download.rsyslog.com/librelp/%{name}-%{version}.tar.gz
 BuildRequires:	pkgconfig(gnutls)
 BuildRequires:	pkgconfig(openssl)
